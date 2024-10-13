@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>my-ttg</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let t of ttgames">
+      <ion-label>
+        <h1>{{t.name}}</h1>
+        <p>{{t.publisher}}</p>
+        <p>{{t.price}}</p>
+        <ion-button (click)="deleteTTGame(t.id)">Eliminar</ion-button>
+        <ion-button (click)="goToUpdate(t.id)">Actualizar</ion-button>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" (click)="goToAddGame()">Ir a añadir juego</ion-button>
+</ion-content>

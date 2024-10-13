@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>ttgameadd</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">ttgameadd</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <form [formGroup]="ttgameForm" (ngSubmit)="updateTTGame()">
+
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="name" type="text"></ion-input>
+    </ion-item>
+    <ion-note color="danger" *ngIf="getFormControl('name')?.hasError('required') && getFormControl('brand')?.touched">
+      El título del juego es obligatorio
+    </ion-note>
+
+    <ion-item>
+      <ion-label position="floating">Editorial</ion-label>
+      <ion-input formControlName="publisher" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Precio</ion-label>
+      <ion-input formControlName="price" type="number"></ion-input>
+    </ion-item>
+  <ion-button expand="full" type="submit" [disabled]="!ttgameForm.valid">Añadir juego de mesa</ion-button>
+  </form>
+
+
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "TTGShop",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
