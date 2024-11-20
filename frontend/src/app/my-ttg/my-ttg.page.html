@@ -6,15 +6,18 @@
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item *ngFor="let t of ttgames">
-      <ion-label>
+    <ion-card *ngFor="let t of ttgames">
+      <ion-card-header>
         <h1>{{t.name}}</h1>
+      </ion-card-header>
+      <ion-card-content>
         <p>{{t.publisher}}</p>
         <p>{{t.price}}</p>
-        <ion-button (click)="deleteTTGame(t.id)">Eliminar</ion-button>
+        <ion-button id="present alert" (click)="confirmarBorrar(t.id)">Eliminar</ion-button>
         <ion-button (click)="goToUpdate(t.id)">Actualizar</ion-button>
-      </ion-label>
-    </ion-item>
+      </ion-card-content>
+    </ion-card>
   </ion-list>
   <ion-button expand="block" (click)="goToAddGame()">Ir a añadir juego</ion-button>
 </ion-content>
+

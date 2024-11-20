@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>ttgameadd</ion-title>
+    <ion-title>ttgameupdate</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">ttgameadd</ion-title>
+      <ion-title size="large">ttgameupdate</ion-title>
     </ion-toolbar>
   </ion-header>
   <form [formGroup]="ttgameForm" (ngSubmit)="updateTTGame()">
@@ -29,7 +29,7 @@
       <ion-label position="floating">Precio</ion-label>
       <ion-input formControlName="price" type="number"></ion-input>
     </ion-item>
-  <ion-button expand="full" type="submit" [disabled]="!ttgameForm.valid">Añadir juego de mesa</ion-button>
+  <ion-button expand="full" type="submit" [disabled]="!ttgameForm.valid">Actualizar juego de mesa</ion-button>
   </form>
 
 
